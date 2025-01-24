@@ -29,8 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void clicked(View view)
     {
-        randomNum = rnd.nextInt((3-1+1)+1);
+        randomNum = rnd.nextInt(3-1+1)+1;
         btn.setText("The number that was rolled is-> " + randomNum);
-
+        switch (randomNum)
+        {
+            case 1:
+                imageV.setImageResource(R.drawable.image1);
+                break;
+            case 2:
+                imageV.setImageResource(R.drawable.image2);
+                break;
+            case 3:
+                imageV.setImageResource(R.drawable.image3);
+                break;
+        }
     }
 }
